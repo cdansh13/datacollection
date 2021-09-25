@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}
+Home
+{% endblock title %}
+{% block body %}
+<div class="container" style="position: relative; top: 60px;">
+    <form action="" method="POST">
+        <div class="mb-3">
+            {% csrf_token %}
+            <label for="exampleFormControlInput1" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="name" name="name">
+            <label for="exampleFormControlTextarea1" class="form-label my-2">Phone Number</label>
+            <input type="number" class="form-control" id="phone" name="phone"></input>
+            <label for="exampleFormControlTextarea1" class="form-label my-2">Your Email Address</label>
+            <input class="form-control" id="email" name="email" placeholder="name@example.com"></input>
+            <label for="exampleFormControlTextarea1" class="form-label my-2">Tell us about yourself</label>
+            <textarea class="form-control" name="desc" id="desc" rows="3"></textarea>
+            <button type="submit" class="btn btn-outline-dark my-3 ">Submit</button>
+        </div>
+    </form>
+</div>
+
+{% endblock body %}
